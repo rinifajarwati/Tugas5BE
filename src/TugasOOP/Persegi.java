@@ -1,17 +1,19 @@
 package TugasOOP;
 
-public class Persegi {
-    private double sisi;
+public class Persegi extends BentukGeometri{
+    double sisi;
 
-    public Persegi(double sisi){
+    public Persegi(double sisi) {
         this.sisi = sisi;
     }
 
-    public double hitungKeliling(){
-        return 4 * sisi;
+    @Override
+    public double hitungLuas() {
+        return sisi * sisi;
     }
 
-    public double hitungLuas(){
-        return sisi * sisi;
+    @Override
+    public double hitungKeliling() {
+        return 4 * sisi;
     }
 }

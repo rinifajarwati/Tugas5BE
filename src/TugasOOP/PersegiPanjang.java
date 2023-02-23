@@ -1,18 +1,20 @@
 package TugasOOP;
 
-public class PersegiPanjang {
-    private double panjang;
-    private double lebar;
+public class PersegiPanjang extends BentukGeometri {
+    double panjang, lebar;
 
-    public PersegiPanjang(double panjang, double lebar){
+    public PersegiPanjang(double panjang, double lebar) {
         this.panjang = panjang;
-        this.lebar =lebar;
-    }
-    public double hitungKeliling(){
-        return 2 * (panjang + lebar);
+        this.lebar = lebar;
     }
 
-    public double hitungLuas(){
-        return panjang * lebar;
+    @Override
+    public double hitungLuas() {
+        return (double) (panjang * lebar);
+    }
+
+    @Override
+    public double hitungKeliling() {
+        return (double) (2 * (panjang + lebar));
     }
 }
